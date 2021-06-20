@@ -62,7 +62,9 @@ export class OfertasService {
     public getOfertas2(): Promise<Oferta[]> {
       return new Promise((resolve, reject) => {
         // algum processamento, que ao finalizar chama a função resolve ou reject
+        console.log('Debug')  //debug app
         resolve( this.ofertas )
+
       })
     }
 }
