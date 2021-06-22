@@ -1,6 +1,7 @@
 
 import { Oferta } from './shared/oferta.model'
-
+//httpclient
+//observable
 
 export class OfertasService {
 
