@@ -1,5 +1,7 @@
-import { Oferta } from './shared/oferta.model'
 
+import { Oferta } from './shared/oferta.model'
+//httpclient
+//observable
 
 export class OfertasService {
 
@@ -33,7 +35,7 @@ export class OfertasService {
                 {url: "/assets/ofertas/2/img3.jpg"},
                 {url: "/assets/ofertas/2/img4.jpg"}
             ]
-        
+
         },
         {
             id: 4,
@@ -56,5 +58,14 @@ export class OfertasService {
     //getOfertas usado no home.component colocado dentro do construtor
     public getOfertas(): Array<Oferta> {
         return this.ofertas
+    }
+
+    public getOfertas2(): Promise<Oferta[]> {
+      return new Promise((resolve, reject) => {
+        // algum processamento, que ao finalizar chama a função resolve ou reject
+        console.log('Debug')  //debug app
+        resolve( this.ofertas )
+
+      })
     }
 }
